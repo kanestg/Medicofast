@@ -1,0 +1,61 @@
+.footer-a-link li{
+margin:6px 0px;
+}
+.footer_social-icon > li{
+display: inline;
+}
+
+@media(min-width: 768px){
+    .desktop-border-right{
+        border-right:1px solid #d2d2d2;
+    }
+}
+
+/*************** SOCIAL SHARE ******************/
+.social-btn {
+    -webkit-box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15);
+    box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15);
+    width: 47px;
+    height: 47px;
+    position: relative;
+    z-index: 1;
+    vertical-align: middle;
+    display: inline-block;
+    overflow: hidden;
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    margin: 10px;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    padding: 0;
+    cursor: pointer;
+}
+footer .social-btn-size-sm{
+    width: 35px;
+    height: 35px;
+}
+footer .social-btn i{
+    line-height: 35px;
+    font-size: 0.9rem !important;
+}
+.fb-btn{
+    background-color: #3b5998!important;
+    color:#fff;
+    box-shadow: 0px 0px 0px 5px rgb(59, 89, 152,0.6);
+}
+.twt-btn{
+    background-color: #55acee!important;
+    color:#fff;
+    box-shadow: 0px 0px 0px 5px rgb(85, 172, 238,0.4);
+}
+.whatsapp-btn{
+    background-color: #25d366!important;
+    color:#fff;
+    box-shadow: 0px 0px 0px 5px rgb(37, 211, 102,0.5);
+}
+.insta-btn{
+    background-color: #2e5e86!important;
+    color: #fff;
+    box-shadow:0px 0px 0px 5px rgb(46, 94, 134,0.6);
+}

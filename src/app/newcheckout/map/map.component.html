@@ -1,0 +1,51 @@
+
+<div class="info-box">
+    <div class="info-inner-box">
+       <h5 >Finding Store</h5>
+       <div class="card mt-2 mb-2 py-2 px-3" style="height: 425px;">
+          <div class="Store-detail">
+             <i class="fas fa-store-alt store-icon2"></i>
+             <div class="store-name"><span>RV Medicos</span></div>
+             <div class="store-addresss">
+                <span>A-333, Durga Vihar, Near Shukar Bazar Road Delhi, Durga Vihar, Devli, Sangam Vihar, New Delhi, Delhi 110080</span>
+             </div>
+             <div class="star-rating">
+                <div class="rate">
+                   <input type="radio" id="star5" name="rate" value="5" />
+                   <label for="star5" data-toggle="tooltip" title="Excellent">5 stars</label>
+                   <input type="radio" id="star4" name="rate" value="4" checked/>
+                   <label for="star4" data-toggle="tooltip" title="Very Good">4 stars</label>
+                   <input type="radio" id="star3" name="rate" value="3" />
+                   <label for="star3" data-toggle="tooltip" title="Good">3 stars</label>
+                   <input type="radio" id="star2" name="rate" value="2" />
+                   <label for="star2" data-toggle="tooltip" title="Bad">2 stars</label>
+                   <input type="radio" id="star1" name="rate" value="1" />
+                   <label for="star1" data-toggle="tooltip" title="Very Bad">1 star</label>
+                </div>
+             </div>
+             <div class="clearfix"></div>
+             <div class="confirmation_box">
+               <span>Waiting For Confirmation ...</span>
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>
+ <div class="map-box" >
+    <div id="style-selector-control"  class="map-control">
+       <select id="style-selector" class="selector-control">
+          <option value="default">Default</option>
+          <option value="silver"  >Silver</option>
+          <option value="night">Night mode</option>
+          <option value="retro" selected="selected">Retro</option>
+          <option value="hiding" >Hide features</option>
+       </select>
+    </div>
+    <div class="g-map" #map style="width:100%;height:500px;margin-bottom:20px;  border-top-right-radius: 5px;border-bottom-right-radius: 5px;"></div>
+    <div class="my-2 text-center" >
+      <button class="btn btn-primary waves-effect continue btn-long" [class.myclass]="test"><span>Continue</span> <svg class="icon" width="20" height="20" viewBox="0 0 64 64"><path id="arrow-right-5" d="M29.333 10.667q1.104 0 1.875 0.771l18.667 18.667q0.792 0.792 0.792 1.896t-0.792 1.896l-18.667 18.667q-0.771 0.771-1.875 0.771t-1.885-0.781-0.781-1.885q0-1.125 0.771-1.896l16.771-16.771-16.771-16.771q-0.771-0.771-0.771-1.896 0-1.146 0.76-1.906t1.906-0.76zM13.333 10.667q1.104 0 1.875 0.771l18.667 18.667q0.792 0.792 0.792 1.896t-0.792 1.896l-18.667 18.667q-0.771 0.771-1.875 0.771t-1.885-0.781-0.781-1.885q0-1.125 0.771-1.896l16.771-16.771-16.771-16.771q-0.771-0.771-0.771-1.896 0-1.146 0.76-1.906t1.906-0.76z"></path></svg></button>
+     </div>
+   </div>
+
+ 
+       

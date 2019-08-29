@@ -1,0 +1,187 @@
+<div class="container-fluid">
+   <div class="row no-gutters my-2">
+      <div class="col-3 pr-3">
+         <div class="card sticky-filter rounded-0 shadow-effect py-1 ">
+            <section class="filter-section-heading">
+               <div class="filter-heaing">
+                  <span >Filters</span>
+               </div>
+            </section>
+            <div class="filter-by-categories text-uppercase">
+               <span class="fliter-head">CATEGORIES</span>
+               <div class="categories-list text-capitalize">
+                  <div class="a-category">
+                     <a href="" class="active">
+                     <i class="fa fa-angle-right"></i>
+                     <span>Home entertainment</span>
+                     </a>
+                  </div>
+                  <div class="a-category">
+                     <a href="" class="">
+                     <i class="fa fa-angle-right"></i>
+                     <span>Television</span>
+                     </a>
+                  </div>
+               </div>
+            </div>
+            <div class="filter-by-price text-uppercase">
+               <span class="fliter-head">Prices (Select maximum price)</span>
+               <div class="price-range-slider my-3">
+                  <mat-slider #rangeSlider thumbLabel min="100" max="8000" (slideend)="getRange(rangeSlider.value)" (pointerup)="getRange(rangeSlider.value)"></mat-slider>
+               </div>
+               <div class="select-price-range">
+                  <div class="row no-gutters">
+                     <div class="col-5">
+                        <select class="browser-default custom-select" (change)="minValue($event.target.value)">
+                           <option value="0" selected>Min</option>
+                           <option *ngFor="let value of minimum" [value]="value">₹ {{value}}</option>
+                        </select>
+                     </div>
+                     <div class="col-2 px-1 text-center">
+                        <span class="price-btw">To</span>
+                     </div>
+                     <div class="col-5">
+                        <select class="browser-default custom-select" (change)="maxValue($event.target.value)">
+                           <option value="" selected>Max</option>
+                           <option *ngFor="let value of maximum" [value]="value">₹ {{value}}</option>
+                        </select>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="fliter-by-accordion">
+               <div class="accordion" id="accordion2" aria-multiselectable="true">
+                  <div class="accordion-group">
+                     <div class="accordion-heading">
+                        <a class="accordion-toggle text-uppercase fliter-head" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+                        Brand
+                        <i class="fa fa-angle-up icon-menu"></i>
+                        </a>
+                     </div>
+                     <div id="collapseOne" class="accordion-body collapse show">
+                        <div class="accordion-inner">
+                           <!-- Default unchecked -->
+                           <div class="custom-control custom-checkbox" *ngFor="let brand of products">
+                              <input type="checkbox" class="custom-control-input" id="{{brand.product_brand}}" value="{{brand.product_brand}}" (change)="checkedBrands($event)">
+                              <label class="custom-control-label" for="{{brand.product_brand}}">{{brand.product_brand}}</label>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="fliter-by-accordion">
+               <div class="accordion" id="accordion2" aria-multiselectable="true">
+                  <div class="accordion-group">
+                     <div class="accordion-heading">
+                        <a class="accordion-toggle text-uppercase fliter-head" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+                        CUSTOMER RATINGS
+                        <i class="fa fa-angle-down icon-menu"></i>
+                        </a>
+                     </div>
+                     <div id="collapseTwo" class="accordion-body collapse">
+                        <div class="accordion-inner">
+                           <!-- Default unchecked -->
+                           <div class="custom-control custom-checkbox">
+                              <input type="checkbox" class="custom-control-input" id="defaultUnchecked1">
+                              <label class="custom-control-label" for="defaultUnchecked">Default unchecked</label>
+                           </div>
+                           <!-- Default unchecked -->
+                           <div class="custom-control custom-checkbox">
+                              <input type="checkbox" class="custom-control-input" id="defaultUnchecked22">
+                              <label class="custom-control-label" for="defaultUnchecked2">Default unchecked</label>
+                           </div>
+                           <!-- Default unchecked -->
+                           <div class="custom-control custom-checkbox">
+                              <input type="checkbox" class="custom-control-input" id="defaultUnchecked23">
+                              <label class="custom-control-label" for="defaultUnchecked3">Default unchecked</label>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="fliter-by-accordion">
+               <div class="accordion" id="accordion2" aria-multiselectable="true">
+                  <div class="accordion-group">
+                     <div class="accordion-heading">
+                        <a class="accordion-toggle text-uppercase fliter-head" data-toggle="collapse" data-parent="#accordion2" href="#collapse3">
+                        some text
+                        <i class="fa fa-angle-down icon-menu"></i>
+                        </a>
+                     </div>
+                     <div id="collapse3" class="accordion-body collapse">
+                        <div class="accordion-inner">
+                           <!-- Default unchecked -->
+                           <div class="custom-control custom-checkbox">
+                              <input type="checkbox" class="custom-control-input" id="defaultUnchecked1">
+                              <label class="custom-control-label" for="defaultUnchecked">Default unchecked</label>
+                           </div>
+                           <!-- Default unchecked -->
+                           <div class="custom-control custom-checkbox">
+                              <input type="checkbox" class="custom-control-input" id="defaultUnchecked22">
+                              <label class="custom-control-label" for="defaultUnchecked2">Default unchecked</label>
+                           </div>
+                           <!-- Default unchecked -->
+                           <div class="custom-control custom-checkbox">
+                              <input type="checkbox" class="custom-control-input" id="defaultUnchecked23">
+                              <label class="custom-control-label" for="defaultUnchecked3">Default unchecked</label>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="col-9 mb-2">
+         <div class="product-grid-box">
+            <div class="col">
+               <div class="breadcrumb mb-2">
+                  <ng-container *ngIf="urlKeywords.length > 2">
+                     <div  class="breadcrumb-items" *ngFor="let bread of urlKeywords | slice:1">
+                        <a href="#!">{{bread | titlecase}}</a>
+                        <span class="arrow angle-right"></span>
+                     </div>
+                  </ng-container>
+                  <ng-container *ngIf="urlKeywords.length === 2">
+                     <div  class="breadcrumb-items" *ngFor="let product of products">
+                           <a href="#!">{{product.product_category}}</a>
+                        <span class="arrow angle-right"></span>
+                     </div>
+                  </ng-container>
+               </div>
+               <div class="number-product mt-1 mb-3">
+                  <div class="d-inline"><span class="text-capitalize text-left all-span-tag mr-1">Showing</span>
+                     <span class="show-all">({{itemFrom}}-{{itemOnPage}} products of {{products.length}} products)</span>
+                     <span class="show-all ml-1" *ngIf="query">results for <i>"{{query | titlecase}}"</i></span>
+                  </div>
+               </div>
+            </div>
+            <hr/>
+            <mat-progress-spinner mode="indeterminate" style="margin:0 auto;" [strokeWidth]="5" *ngIf="!apiResponse"></mat-progress-spinner>
+            <div class="row no-gutters" *ngIf="apiResponse">
+               <div class="col-md-3" *ngFor="let product of products | filterRangePrice: mat_price | filterMinMaxPrice: minPrice: maxPrice | filterBrands: brands | paginate: { itemsPerPage: pageSize, currentPage: p }">
+                  <div class="item product-item">
+                     <a [routerLink]="['/browse', product.product_title, product.product_id]">
+                        <div class="card">
+                           <div class="product-img">
+                              <img class="card-img-top" src="{{product.product_img}}" alt="Card image cap">
+                           </div>
+                           <div class="card-body text-center">
+                              <h6 class="card-title product-title ">{{product.product_title}}...</h6>
+                              <p class="card-text product-category">{{product.product_category}}</p>
+                              <p class="product-price">₹ {{product.product_offer_price}}</p>
+                     </div>
+                     </div>
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="pagination-box" *ngIf="apiResponse">
+            <pagination-controls class="text-center" maxSize="10" (click) = "pageChanged(p)" (pageChange)="p = $event" autoHide="true"></pagination-controls>
+         </div>
+      </div>
+   </div>
+</div>

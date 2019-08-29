@@ -1,0 +1,67 @@
+.login-btn{
+    background: #2096ff;
+    letter-spacing: 0.2px;
+    border-radius: 25px;
+    text-transform: none;
+}
+.login-btn:hover{
+background:#0f70c7;
+color:#fff;
+}
+.chng-btn{
+    font-weight: 400;
+}
+.md-form label{
+    font-weight:400;
+}
+.invalid-feedback{
+font-weight: 400;
+}
+.forgot-pwd{
+    margin-top:10px;
+    font-weight: 400;
+}
+.login-form{
+    /* padding:50px 30px; */
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.4);
+}
+.form-inner-conatiner{
+    padding: 40px 30px;
+    }
+    .google-signIn{
+        padding: 10px 0px !important;
+        border-radius: 25px;
+        text-transform: none;
+    }   
+    .google-signIn span{
+        color: #000;
+        top: 2px;
+        font-weight: 500;
+        position: relative;
+        font-size: 15px;
+    }
+.google-signIn img{
+    float: left;
+    margin: 0px 20px;
+}
+
+.heading{
+
+    /* margin: 0 0px 50px 0px; */
+    padding: 15px 10px;
+    /* margin-bottom: 30px; */
+    color: #fff;
+    position: relative;
+    /* font-weight: 600 !important; */
+    background: rgba(32,150,255);
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    /* box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.1), 0px 5px 20px -6px rgba(32,150,255,0.6); */
+    margin-top: 0px;
+    text-align: center;
+    
+    box-shadow: 0px 0px 10px 0px rgba(32,150,255,0.4);
+
+}

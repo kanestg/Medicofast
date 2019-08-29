@@ -1,0 +1,210 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700|Google+Sans:400,500|Product+Sans:400&lang=en");
+@import url("//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css");
+
+.map-box{
+    position: relative;
+    left: 18px;
+    border-radius: 5px;
+    padding-bottom:20px; 
+    box-shadow:0px 0px 20px 0px rgba(0,0,0,0.19);
+}
+.g-map> div:first-child{
+    left: 50px !important;
+}
+.info-box{
+    position: relative;
+}
+.margin-b{
+    margin-bottom:150px;
+}
+.info-inner-box{
+
+    height: 500px;
+    position: absolute;
+    top: 0;
+    /* font-weight: 500; */
+    left: 18px;
+    border-radius: 5px;
+    z-index: 999;
+    background: linear-gradient(90deg,#FFF 11%,#fff 31%,#fff 60%,#fff 46%, hsla(0,0%,100%,0)),linear-gradient(90deg,#FFF 11%,#fff 31%,#fff 60%,#fff 46%, hsla(0,0%,100%,0))!important;
+    padding: 10px 20px;
+    width: 300px;
+    box-shadow: 0px 0px 14px 0px rgba(255,255,255,0.2);
+
+}
+.info-inner-box h5{
+font-weight: 500;
+font-size: 26px;
+letter-spacing: -.5px;
+margin:10px 0px 25px 0px;
+-moz-osx-font-smoothing: grayscale;
+-webkit-font-smoothing: antialiased;
+text-rendering: optimizeLegibility;
+color: #202124 !important; 
+font-family: "Google Sans",Roboto,Arial,Helvetica,sans-serif !important;
+}
+.store-name{
+    position: relative;
+    top: 15px;
+    margin-bottom: 18px;
+}
+.store-name span{
+font-weight: 500;
+font-size: 24px;
+letter-spacing: -.5px;
+/* margin-left: 15px; */
+-moz-osx-font-smoothing: grayscale;
+-webkit-font-smoothing: antialiased;
+text-rendering: optimizeLegibility;
+color: #202124 !important;
+font-family: "Google Sans",Roboto,Arial,Helvetica,sans-serif !important;
+}
+.store-icon2{
+
+width: 260px;
+padding-left: 103px;
+padding-top: 14px;
+color: #fff;
+background: #10d1cc;
+margin-top: -8px;
+font-size: 44px;
+margin-left: -16px !important;
+line-height: 70px;
+height: 100px;
+box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+border-top-left-radius: 5px;
+border-top-right-radius: 5px;
+}
+.store-addresss span{
+font-size: 14px;
+}
+.star-rating{
+    position: relative;
+    float: left;
+    display: block;
+}
+.rate:not(:checked) > input {
+    position:absolute;
+    /* top:-9999px; */
+   
+    display: none;
+}
+.rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:#ccc;
+}
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+.rate > input:checked ~ label {
+    color: #ffc700;    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #ffc700;  
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #ffc700;
+}
+.confirmation_box span{
+    font-weight: 500;
+    color: #1baaed;
+
+}
+.store-icon{
+    width: 70px;
+    text-align: center;
+    top: -34px;
+    left: 90px;
+    color: #fff;
+    background: #10d1cc;
+    position: absolute;
+    line-height: 70px;
+    height: 70px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+    border-radius: 50px;
+}
+body{
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    color: #202124 !important;
+    font-family: "Google Sans",Roboto,Arial,Helvetica,sans-serif !important;
+}
+.continue{
+font-size: 1rem;
+border-radius: 5px;
+background: #8E2DE2;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #4A00E0, #8E2DE2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+width:220px;
+position: relative;
+display: inline-block;
+transition: all .5s;
+}
+.continue .icon{
+fill:#0000;
+position: relative;
+right: 0px;
+transition: all .5s ;
+
+}
+.continue:hover .icon{
+display:inline;
+fill: #fff;
+margin-left: 12px;
+}
+.edit-address{
+position: relative;    
+padding:0px 20px;
+margin:10px 0 30px 0;
+-moz-osx-font-smoothing: grayscale;
+-webkit-font-smoothing: antialiased;
+text-rendering: optimizeLegibility;
+color: #202124 !important;
+font-family: "Google Sans",Roboto,Arial,Helvetica,sans-serif !important;
+}
+.ship-addres{
+ font-weight: 500;
+ margin-left: 20px;
+margin-bottom: 15px;   
+}
+.address-card{
+    position: relative;
+    /* border:1px solid #d1d1d1; */
+    padding:10px 15px; 
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+    border-radius: 5px;
+}
+.edit-icon{
+    position: absolute;
+    top: -17px;
+    right: 10px;
+   cursor: pointer;
+    font-size: 1.5rem;
+    background: #FFF;
+    color: #1ca6f1;
+}
+.address-card .c_name{
+font-size: 16px;
+font-weight: 500;
+}
+.address-card p{
+    font-size: 14px;
+    font-weight: 400;
+    }
+@media(min-width:992px){   
+.address-card{
+   max-width: 90%;
+   margin-left: 20px;
+}
+}

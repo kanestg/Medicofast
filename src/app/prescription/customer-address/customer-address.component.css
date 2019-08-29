@@ -1,0 +1,19 @@
+.address-component label{
+font-weight: 400;
+}
+select{
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    outline: 0;
+    font-size: 1rem;
+    letter-spacing: .01rem;
+    width: 100%;
+    box-shadow: none;
+    color: #757575;
+    border: none;
+    border-bottom: 1px solid #ced4da;
+    border-radius: 0;
+    box-sizing: content-box;
+    padding-top: .6rem;
+    padding-bottom: 0.5rem;
+    background-color: transparent;
+}

@@ -1,0 +1,240 @@
+<main>
+   <div class="main-slider">
+      <div class="Modern-Slider">
+         <!-- Item -->
+         <div class="item">
+            <div class="img-fill">
+               <img src="https://rukminim1.flixcart.com/flap/3376/560/image/998ef039416d789a.jpg?q=50" alt="" width="1300px" height="400px">
+               <div class="info">
+                  <div>
+                     <h3>Full Width Slider With Layers</h3>
+                     <h5>You can easily add image, html formatted texts and video layers over each slide and each layer accepts unique animation.</h5>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- // Item -->
+         <!-- Item -->
+         <div class="item">
+            <div class="img-fill">
+               <img src="https://rukminim1.flixcart.com/flap/3376/560/image/70a01461d3043587.jpg" alt="" width="1300px">
+               <div class="info">
+                  <div>
+                     <h3>Fully responsive Scales with its container</h3>
+                     <h5>Donec id ornare dui. Aenean tristique condimentum elit, quis blandit nisl varius sit amet. Sed eleifend felis quis massa viverra</h5>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- // Item -->
+      </div>
+   </div>
+   <div class="container-fluid mx-0 mt-4 info-bar">
+      <div class="row px-4">
+         <div class="col-md-3 mx-0 px-0 info-col">
+            <div class="card-inner-box">
+               <i class="fa fa-gift"></i>
+               <div class="content">
+                  <p>BONUS PLUS</p>
+                  <span>Make fun of shopping and collect bonuses</span>
+               </div>
+            </div>
+         </div>
+         <div class="col-md-3 mx-0 px-0 info-col">
+            <div class="card-inner-box">
+               <i class="fa fa-gift"></i>
+               <div class="content">
+                  <p>BONUS PLUS</p>
+                  <span>Make fun of shopping and collect bonuses</span>
+               </div>
+            </div>
+         </div>
+         <div class="col-md-3 mx-0 px-0 info-col">
+            <div class="card-inner-box">
+               <i class="fa fa-gift"></i>
+               <div class="content">
+                  <p>BONUS PLUS</p>
+                  <span>Make fun of shopping and collect bonuses</span>
+               </div>
+            </div>
+         </div>
+         <div class="col-md-3 mx-0 px-0 info-col">
+            <div class="card-inner-box">
+               <i class="fa fa-gift"></i>
+               <div class="content">
+                  <p>BONUS PLUS</p>
+                  <span>Make fun of shopping and collect bonuses</span>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="container-fluid mx-0 mt-4 featured-prod">
+      <div class="row ">
+         <div class="col-md-4 offer-first">
+            <a href="">
+               <div class="card offer-img mx-1">
+                  <img src="https://www.netmeds.com/pub/media/aw_rbslider/slides/Fitness-_450px_.jpg">
+               </div>
+            </a>
+         </div>
+         <div class="col-md-4">
+            <a href="">
+               <div class="card offer-img mx-1">
+                  <img src="https://www.netmeds.com/pub/media/aw_rbslider/slides/Summer-Season-_450px_.jpg">
+               </div>
+            </a>
+         </div>
+         <div class="col-md-4 offer-last">
+            <a href="">
+               <div class="card offer-img mx-1">
+                  <img src="https://www.netmeds.com/pub/media/aw_rbslider/slides/Ayurwin-_450px_.jpg">
+               </div>
+            </a>
+         </div>
+      </div>
+   </div>
+   <div class="container-fluid  mb-4 mt-4 prod-slider">
+      <div class="product-box">
+         <div class="d-inline">
+            <h4 class="ml-4 float-left">Featured Product</h4>
+            <button type="button" class="btn waves-effect waves-dark btn-primary btn-sm float-right" routerLink="/product"><i class="fas fa-eye mr-2"></i> <strong>View All</strong></button>
+         </div>
+         <div class="clearfix"></div>
+         <mat-progress-spinner mode="indeterminate" style="margin:0 auto;" [strokeWidth]="5" *ngIf="!apiResponse"></mat-progress-spinner>
+         <div class="product-slider" id="product-slider" *ngIf="apiResponse">
+            <div class="item product-item" *ngFor="let product of products">
+               <div class="item product-item home-product">
+                  <a  (click)="productID(product.product_id, product.product_category)">
+                     <div class="card">
+                        <div class="product-img">
+                           <img class="card-img-top" src="{{product.product_img}}" alt="Card image cap">
+                        </div>
+                        <div class="card-body text-center">
+                           <h6 class="card-title product-title">{{product.product_title}}...</h6>
+                           <p class="card-text product-category">{{product.product_category}}</p>
+                           <div class="product-discount">
+                              <span><del>₹ {{product.product_mrp}}</del> 
+                                 {{(((product.product_mrp - product.product_offer_price)/product.product_mrp) * 100) | number:'1.0-0'}}% Off
+                              </span>
+                           </div>
+                           <p class="product-price">₹ {{product.product_offer_price}}</p>
+                           <!-- <hr>
+                              <a class="px-2 fa-sm product-icon tw-ic"><i class="fa fa-shopping-cart"> </i></a>
+                              <a class="px-2 fa-sm product-icon li-ic"><i class="fa fa-eye"> </i></a>
+                              <a class="px-2 fa-sm product-icon email-ic"><i class="fas fa-envelope"> </i></a> -->
+                        </div>
+                     </div>
+                  </a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="container-fluid  mb-4 mt-2 prod-slider">
+      <div class="row">
+         <div class="col-md-3 pr-0">
+            <div class="offer-box">
+               <a href="javascript:void(0)">
+                  <div class="offer-inner-box">
+                     <img src="https://www.netmeds.com/pub/media/aw_rbslider/slides/Amazing_Offer_Mobikwik__2.jpg">
+                  </div>
+               </a>
+            </div>
+         </div>
+         <div class="col-md-9">
+            <div class="product-box">
+               <div class="d-inline">
+                  <h4 class="ml-4 float-left">Featured Product</h4>
+                  <button type="button" class="btn waves-effect waves-dark btn-primary btn-sm float-right" routerLink="/product"><i class="fas fa-eye mr-2"></i> <strong>View All</strong></button>
+               </div>
+               <div class="clearfix"></div>
+               <mat-progress-spinner mode="indeterminate" style="margin:0 auto;" [strokeWidth]="5" *ngIf="!apiResponse"></mat-progress-spinner>
+               <div class="product-slider" id="product-slider2" *ngIf="apiResponse">
+                  <div class="item product-item" *ngFor="let product of products">
+                     <div class="item product-item home-product">
+                        <a  (click)="productID(product.product_id, product.product_category)">
+                           <div class="card">
+                              <div class="product-img">
+                                 <img class="card-img-top" src="{{product.product_img}}" alt="Card image cap">
+                              </div>
+                              <div class="card-body text-center">
+                                 <h6 class="card-title product-title">{{product.product_title}}...</h6>
+                                 <p class="card-text product-category">{{product.product_category}}</p>
+                                 <div class="product-discount">
+                                    <span><del>₹ {{product.product_mrp}}</del> 
+                                       {{(((product.product_mrp - product.product_offer_price)/product.product_mrp) * 100) | number:'1.0-0'}}% Off
+                                    </span>
+                                 </div>
+                                 <p class="product-price">₹ {{product.product_offer_price}}</p>
+                              </div>
+                           </div>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="container-fluid px-0 mt-2">
+      <div class="how-it-work-section">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="how-it-work text-center">
+                     <h1>How it works</h1>
+                     <p>Receive your medication in 3 easy steps</p>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="dashed-border"></div>
+               <div class="col-md-4">
+                  <div class="how-it-work-step-box">
+                     <div class="step-rounded">
+                        <p>Step<br>
+                           <span>01</span>
+                        </p>
+                     </div>
+                     <div class="icon-box">
+                        <img src="images/icon-01.png" alt="">
+                     </div>
+                     <h2>Select Treatment</h2>
+                     <p>Lorem ipsum dolor sit amet. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, nec sagittis sem nibh id elit. Duis sed odio</p>
+                  </div>
+               </div>
+               <div class="col-md-4">
+                  <div class="how-it-work-step-box">
+                     <div class="step-rounded">
+                        <p>Step<br>
+                           <span>02</span>
+                        </p>
+                     </div>
+                     <div class="icon-box">
+                        <img src="images/icon-01.png" alt="">
+                     </div>
+                     <h2>Select Treatment</h2>
+                     <p>Lorem ipsum dolor sit amet. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, nec sagittis sem nibh id elit. Duis sed odio</p>
+                  </div>
+               </div>
+               <div class="col-md-4">
+                  <div class="how-it-work-step-box">
+                     <div class="step-rounded">
+                        <p>Step<br>
+                           <span>03</span>
+                        </p>
+                     </div>
+                     <div class="icon-box">
+                        <img src="images/icon-01.png" alt="">
+                     </div>
+                     <h2>Select Treatment</h2>
+                     <p>Lorem ipsum dolor sit amet. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, nec sagittis sem nibh id elit. Duis sed odio</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</main>
+<!--Main layout-->

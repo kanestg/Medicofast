@@ -1,0 +1,79 @@
+<div class="container">
+   <div class="row">
+      <div class="col-md-8 my-3 text-left">
+         <div class="cart-item-left">
+            <div class="shipping-delivery card">
+               <div class="cat-delivery-icon"></div>
+               <div>Yay! <span class="shipping-bold">Free Delivery</span> on this order</div>
+            </div>
+            <div class="shipping-header">
+               <div class="shipping-heading-left">
+                  My Shopping Bag ({{cartItem.length}} Items)
+               </div>
+               <div class="shipping-heading-right">
+                  <div class="item-base-PrdouctCartvalue">
+                     Total:
+                     <span class="product-Total-value"><i class="fas fa-rupee-sign"></i> {{cartTotal}} </span>
+                  </div>
+               </div>
+               <div class="clearfix"></div>
+            </div>
+            <div class="shipping-product-item text-center m-5 p-5" *ngIf="cartItem.length === 0">
+               <h1>Your cart is empty!</h1>
+            </div>
+            <div class="shipping-product-item card mb-4" *ngFor="let cart of cartItem">
+               <div class="item-container">
+                  <div class="item-container-left">
+                     <img src="{{cart?.product_img}}">
+                  </div>
+                  <div class="item-container-right">
+                     <div class="item-detail-container">
+                        <div class="item-name-and-price">
+                           <div class="item-name">
+                              <a [routerLink]="['/browse', cart.product_title, cart.product_id]">
+                              {{cart?.product_title}}
+                              </a>
+                           </div>
+                           <div class="item-price">
+                              ₹ {{cart?.newPrice}}
+                           </div>
+                        </div>
+                        <div class="_2ndrow">
+                           <div class="item-soldBy">
+                              <span>Sold By: Medicofast</span>
+                           </div>
+                           <div class="float-right d-inline-flex font-400">
+                              <div class="border-right pr-2">
+                                 <del >₹ {{cart?.product_mrp}}</del>
+                              </div>
+                              <div class="discount-percentage pl-2">
+                                 <span class="font-color">{{(((cart?.product_mrp - cart?.product_offer_price)/cart?.product_mrp) * 100) | number:'1.0-0'}}% off</span>
+                              </div>
+                           </div>
+                           <div class="clearfix"></div>
+                        </div>
+                        <div class="third_row my-3">
+                           <div class="quantity-select">
+                              <span class="text">Quantity</span>
+                                 <select  class="form-control select-qty" (change)="selectOption($event.target.value, cart?.product_id)">
+                                    <option value="{{x}}" *ngFor="let x of quantity">{{x}}</option>
+                                 </select>
+                                 <h1>{{cart.product_quantity}}</h1>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="item-action-btn">
+                        <div class="action-btn col">
+                              <button type="button" class="btn btn-danger btn-sm" (click)="removeItem(cart.product_id)">Remove</button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="col-md-4 my-3">
+         <div class="border"></div>
+      </div>
+   </div>
+</div>

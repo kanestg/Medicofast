@@ -1,0 +1,96 @@
+.perscp-tab {
+    -webkit-box-shadow: 0 5px 1px 0 rgba(0,0,0,.18);
+    box-shadow: none;
+    border: 0;
+    margin-bottom: -20px;
+    background-color: rgba(200,200,200,.2);
+    z-index: 1;
+    position: relative;
+    -webkit-border-radius: .25rem;
+    border-radius: .25rem;
+}
+.layout-bg-color{
+    background: #eee;
+}
+.perscp-tab .nav-item{
+    width:33.333%;
+}
+.perscp-tab .nav-item:nth-child(1) .nav-link.active{
+    margin-left:-15px;
+transition:none;
+margin-right:15px;
+}
+.perscp-tab .nav-item:nth-child(3) .nav-link.active{
+    margin-left:15px;
+transition:none;
+margin-right:-15px;
+}
+.perscp-tab .nav-link.active{
+border-radius:.25rem;
+border:none;
+border-color:unset;
+background: #2096ff;
+color:#fff;
+
+/* 
+box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(32,150,255,.15); */
+box-shadow:0 5px 15px 0 rgba(0,0,0,.18), 0 4px 11px 0 rgba(32,150,255,.3)
+}
+.perscp-tab .nav-link{
+    padding:.7rem 0rem;
+    border:none;
+    color: #000;
+    text-align: center;
+    -webkit-transition:none;
+    -o-transition: none;
+    transition: none;
+    -webkit-border-radius: unset;
+    border-radius:unset;
+
+}
+.main-contnet-box{
+    height: 100%;
+    margin: 0 20px;
+    margin-top: 50px;
+    }
+
+    .upload-box{
+        height: 100%;
+    }
+    .right-upload-content{
+        width: 340px;
+        height: 300px;
+     }
+     .right-upload-content h5{ 
+    font-weight: 400;
+     } 
+     .right-upload-content a{
+         font-weight: 300;
+     }
+    .right-heading{
+         font-size: 1.1rem;
+         font-weight: 400;
+     }    
+     .address-component label{
+        font-weight: 400;
+        }
+        select{
+            transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+            outline: 0;
+            font-size: 1rem;
+            letter-spacing: .01rem;
+            width: 100%;
+            box-shadow: none;
+            color: #757575;
+            border: none;
+            border-bottom: 1px solid #ced4da;
+            border-radius: 0;
+            box-sizing: content-box;
+            padding-top: .6rem;
+            padding-bottom: 0.5rem;
+            background-color: transparent;
+        }
+        
+        agm-map {
+            height: 300px;
+          }

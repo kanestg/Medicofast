@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
+
+.login-left{
+    background: #0277bd;
+    width: 100%;
+    height: 450px;
+}
+.toast{
+    opacity: 1 !important;
+  /* /  position: absolute;
+    min-width: 300px;
+    z-index: 999;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3);
+    border-radius: unset;
+    top: 5%;
+    right: 30px; */
+}
+.login-alert{
+    position: fixed;
+  min-width: 300px;
+  z-index: 999;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3);
+  border-radius: unset;
+  top: 5%;
+  right: 30px; 
+}
+.m-heading{
+    color:#fff;
+    font-weight: 300;
+}
+.m-heading span{
+font-size:28px;
+    color:#fff;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-left: 35px;
+}
+
+.md-close-icon span{
+    padding: 5px 15px 8px 15px;
+    background:#000; 
+    float: right;
+    color: #fff;
+}
+.login-left-content img{
+width: 200px;
+margin-top: 13%;
+margin-right: 35px;
+}
+.forgot-pwd{
+  
+    font-weight: 400;
+}
+.md-form label{
+    font-weight:400;
+}
+
+.login-btn{
+    background: #2096ff;
+    letter-spacing: 0.2px;
+}
+.login-btn:hover{
+background:#0f70c7;
+color:#fff;
+}
+.chng-btn{
+    font-weight: 400;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+/* .account{
+    width: 100%;
+    height: 100%;
+    background:url('https://demos.creative-tim.com/material-dashboard-pro-angular2/assets/img/login.jpg');
+    
+} */
+.account{
+    width: 100%;
+    min-height:100vh;
+background: url('https://demos.creative-tim.com/material-dashboard-pro-angular2/assets/img/login.jpg');
+background-size:cover; 
+background-attachment: fixed;
+
+}
+.account-box{
+    min-height: 900px;
+}
+.main-content{
+position: relative;
+top:11%;
+}
+
+.account:before{
+  
+    background: #24C6DC;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #514A9D, #24C6DC);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #514A9D, #24C6DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+position: absolute;
+top:0;
+left: 0;
+content:'';
+}
+
+
+
+
+@-webkit-keyframes fade-in {
+  from {
+    visibility: hidden;
+    opacity: 0;
+  }
+  to {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  from {
+    visibility: hidden;
+    opacity: 0;
+  }
+  to {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes slide-show {
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@keyframes slide-show {
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@-webkit-keyframes slide-in-left {
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+@keyframes slide-in-left {
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}

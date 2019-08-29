@@ -1,0 +1,79 @@
+.upload-btn{
+    color:#fff !important;
+    
+}
+.login-user-name{
+text-transform:uppercase;
+margin-top: 5px;
+}
+.dropdown-parent-nav{
+font-weight: 600 !important;
+font-size: 14px !important;
+}
+.dropdown-parent-nav:hover{
+    background: #f2f2f2 !important;
+    box-shadow: none !important;
+    color: #000 !important;
+}
+.ayush-min-width{
+    width:700px;
+}
+.fitness-min-width{
+width: 600px;
+}
+.personal_care-min-width{
+width:750px;
+margin-left: -200px;
+}
+.Family_care-min-width{
+    width: 400px;
+}
+/* .navbar .mega-dropdown {
+/* position:static; 
+
+} */
+.navbar-nav .nav-item:last-child .dropdown-menu{
+    left:unset;
+    right: 0;
+}
+.dropdown-min-width{
+    min-width: 400px !important;
+    width: auto;
+}
+.navbar-expand-lg .navbar-nav .dropdown-menu {
+    top:45px;
+    padding:10px 7px;
+    border-top: 4px solid #fd6c63 !important;
+}
+.dropdown-menu {
+border-radius: 0px;
+border:none;
+}
+.product-item .card{
+    height: 280px;
+}   
+
+.navbar .dropdown-menu a{
+    color: #444444;
+    font-weight: 400;
+    font-size: 13px;
+    padding: 7px 10px;
+}   
+
+.navbar .dropdown-menu a:hover {
+    color:#fff;
+    background: #10d1cc;
+    box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.1), 0px 5px 10px 0px rgba(31,146,249,0.2);
+} 
+
+.mat-option.mat-active, .mat-option:hover {
+    background: rgba(141, 136, 136, 0.18) !important;
+}
+
+.mat-option {
+    font-size: 13px;
+}
+
+.search-bar {
+    font-size: 13px;
+}

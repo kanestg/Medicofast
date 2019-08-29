@@ -1,0 +1,129 @@
+<div class="layout-bg-color py-5">
+      <div class="col-md-8 mx-auto ">
+         <div class="shadow card pt-4">
+            <div class="text-center my-4">
+               <h3>Book Your Order</h3>
+            </div>
+            <ul class="nav nav-tabs perscp-tab" id="myTabMD" role="tablist">
+               <li class="nav-item" [ngClass]="{ 'disabled': tab_buttons }"> 
+                  <a class="nav-link active" id="upload-tab" data-toggle="tab" href="#upload-md" role="tab" aria-controls="upload-md"
+                     aria-selected="true"
+                     aria-selected="true">Upload prescription</a>
+               </li>
+               <li class="nav-item" [ngClass]="{ 'disabled': tab_buttons }">
+                  <a class="nav-link add-link" id="address-tab" data-toggle="tab" href="#address-md" role="tab" aria-controls="address-md"
+                     aria-selected="false">Address</a>
+               </li>
+               <li class="nav-item" [ngClass]="{ 'disabled': tab_buttons }">
+                  <a class="nav-link" id="contact-tab-md" data-toggle="tab" href="#contact-md" role="tab" aria-controls="contact-md"
+                     aria-selected="false">Contact </a>
+               </li>
+            </ul>
+            <div class="main-contnet-box">
+               <div class="tab-content pt-1" id="myTabContentMD">
+                  <div class="tab-pane fade show active" id="upload-md" role="tabpanel" aria-labelledby="upload-tab-md">
+                     <form [formGroup]="prescriptionUploadForm">
+                        <div class="row">
+                           <div class="col-md-5">
+                              <ngx-dropzone class="upload-box" (filesAdded)="onFilesAdded($event)" [showImagePreviews]="true"></ngx-dropzone>
+                           </div>
+                           <div class="col-md-7 ">
+                              <!-- <input class="result" type="text"  placeholder="Date Picker..."> -->
+                              <div class="right-upload-content mx-auto">
+                                 <span class="right-heading">Select Prescription Date</span>
+                                 <div class="md-form date-picker mx-auto mb-4">
+                                    <my-date-picker [options]="myDatePickerOptions" formControlName="pres_date" [(ngModel)]="prescription_date">
+                                    </my-date-picker>
+                                 </div>
+                                 <span class="right-heading">Question</span>
+                                 <div class=" border-bottom py-3" >
+                                    <a class="d-block"><i class="fa fa-medkit grey-text mr-3 " style="font-size:26px; " aria-hidden="true"></i> I want all the medicines <i class="fa fa-angle-right  mr-3" style="float: right; margin-top: 10px;" aria-hidden="true"></i>   </a>
+                                 </div>
+                                 <div class=" border-bottom py-3" >
+                                    <a class="d-block"><i class="fa fa-medkit grey-text mr-3 " style="font-size:26px; " aria-hidden="true"></i> I want all the medicines <i class="fa fa-angle-right  mr-3" style="float: right; margin-top: 10px;" aria-hidden="true"></i>   </a>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="float-right mt-2 pt-2 mb-3">
+                           <button class="btn btn-primary  waves-effect btn-md" [disabled]="!prescriptionUploadForm.valid" (click)="uploadNext('add-link')" data-toggle="tab" data-target="#address-md">Next</button>
+                        </div>
+                     </form>
+                  </div>
+                  <div class="tab-pane fade" id="address-md" role="tabpanel" aria-labelledby="address-tab-md">
+                     <div class="address-component mx-5">
+                        <form [formGroup]="prescriptionAddressForm">
+                              <div class="row ">
+                                 <div class="col-md-6">
+                                    <div class="md-form form-group">
+                                       <input type="text" class="form-control" [(ngModel)]="full_name" formControlName="full_name">
+                                       <label for="full_name">Full name</label>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-6">
+                                    <div class="md-form form-group">
+                                       <input type="number" class="form-control" formControlName="phone" [(ngModel)]="phone" onKeyPress="if(this.value.length==10) return false;">
+                                       <label for="phone">Mobile number</label>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="form-row">
+                                 <div class="col-md-6">
+                                    <div class="md-form form-group">
+                                          <input type="text" class="form-control" formControlName="address" [(ngModel)]="address">
+                                          <label for="address">Street address</label>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-4">
+                                       <div class="md-form form-group">
+                                             <input type="text" class="form-control" formControlName="city" [(ngModel)]="city">
+                                             <label for="city">City</label>
+                                       </div>
+                                 </div>
+                                 <div class="col-md-2">
+                                    <div class="md-form form-group ml-2">
+                                          <input type="number" class="form-control" formControlName="pincode" [(ngModel)]="pincode" onKeyPress="if(this.value.length==6) return false;">
+                                          <label for="pincode">Pincode</label>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="form-row">
+                                 <div class="col-md-4">
+                                    <div class="md-form form-group">
+                                          <select  class="md-form form-group mx-1" [(ngModel)]="selectedState" formControlName="state">
+                                                <option selected [ngValue]="Select">Select state</option>
+                                                <option value="Delhi">Delhi</option>
+                                                <option value="Mumbai">Mumbai</option>
+                                                <option value="Bihar">Bihar</option>
+                                             </select>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="float-right mt-2 pt-2 mb-3">
+                                    <button  class="btn btn-primary  waves-effect btn-md" [disabled]="!prescriptionAddressForm.valid" (click)="uploadFinal('add-link', full_name, phone, address, city, pincode, selectedState)" data-toggle="tab" data-target="#contact-md">Next</button>
+                                 </div>
+                           </form>
+                     </div>
+                  </div>
+                  <div class="tab-pane fade" id="contact-md" role="tabpanel" aria-labelledby="contact-tab-md">
+                     <div class="find-medical-stores">
+                        <div class="row">
+                           <div class="col-md-6 no-gutter">
+                              <!-- <div id='map'></div> -->
+                              <agm-map [latitude]="lat" [longitude]="lng" [zoom]="14" [disableDefaultUI]="true"
+                              [zoomControl]="false" [styles]="styleMap">
+                              <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+                              <agm-circle [latitude]="lat" [longitude]="lng" [radius]="radiusMap" [fillColor]="'red'" [fillOpacity]="0.5"
+                              [circleDraggable]="false" [editable]="false" >
+                              <agm-circle [latitude]="lat" [longitude]="lng" [radius]="150"[fillColor]="'yellow'"[circleDraggable]="false"[editable]="false" ></agm-circle>
+                              </agm-circle>
+                              </agm-map>
+                           </div>
+                           <div class="col-md-6"></div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>

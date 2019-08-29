@@ -1,0 +1,67 @@
+<div class="address_box">
+  <h4 class="check-main-cart ml-5">General information</h4>
+  <!-- <div class="btn-container mt-4">
+     <button class="btn" id="Next">Next</button>
+     <button class="btn" id="Back">Back</button>
+     <button class="btn" id="Reset">Reset</button> 
+     </div> -->
+  <div class="address-component mx-5">
+     <form [formGroup]="prescriptionAddressForm">
+        <div class="row ">
+           <div class="col-md-6">
+              <div class="md-form form-group">
+                 <input type="text" class="form-control" id="full_name" [(ngModel)]="full_name" formControlName="full_name">
+                 <label for="full_name">Full name</label>
+              </div>
+           </div>
+           <div class="col-md-6">
+              <div class="md-form form-group">
+                 <input type="number" class="form-control" formControlName="phone" id="phone" [(ngModel)]="phone" onKeyPress="if(this.value.length==10) return false;">
+                 <label for="phone">Mobile number</label>
+              </div>
+           </div>
+        </div>
+        <div class="form-row">
+           <div class="col-md-12">
+              <div class="md-form form-group">
+                 <input type="text" class="form-control" id="address" formControlName="address" [(ngModel)]="address">
+                 <label for="address">Address</label>
+              </div>
+           </div>
+        </div>
+        <div class="form-row">
+           <div class="col-md-12">
+              <div class="md-form form-group">
+                 <input type="text" class="form-control" id="landmark" formControlName="address" [(ngModel)]="address">
+                 <label for="landmark">Landmark e.g. near apollo hospital:</label>
+              </div>
+           </div>
+        </div>
+        <div class="form-row">
+           <div class="col-md-6">
+              <div class="md-form form-group">
+                 <input type="text" class="form-control" id="city" formControlName="city" [(ngModel)]="city">
+                 <label for="city">Town/City:</label>
+              </div>
+           </div>
+           <div class="col-md-6">
+              <div class="md-form form-group ml-2">
+                 <input type="text" class="form-control" formControlName="state" [(ngModel)]="state" onKeyPress="if(this.value.length==6) return false;">
+                 <label for="state">State  </label>
+              </div>
+           </div>
+        </div>
+        <div class="form-row">
+          <div class="col-md-6">
+             <div class="md-form form-group ">
+                <input type="number" class="form-control" formControlName="pincode" [(ngModel)]="pincode" onKeyPress="if(this.value.length==6) return false;">
+                <label for="pincode">Pincode</label>
+             </div>
+          </div>
+        </div>
+        <div class="text-center mt-2 pt-2 mb-3">
+           <button  class="btn btn-primary waves-effect btn-md btn-long" routerLink="map" [disabled]="!prescriptionAddressForm.valid"  data-toggle="tab" id="Next" data-target="#contact-md">Next</button>
+        </div>
+     </form>
+  </div>
+</div>

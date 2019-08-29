@@ -1,0 +1,127 @@
+
+
+.pad-15{
+    padding-left:20px;
+    padding-right:20px;
+}
+.filter-heaing span{
+    font-size: 18px;
+    font-weight: 500;
+    }
+.filter-by-price,.filter-by-categories,.filter-section-heading{
+    padding:15px 20px;
+    border-bottom:1px solid #f0f0f0;
+    letter-spacing: .3px;
+}
+.fliter-head {
+    font-size: 13px;
+    font-weight: 500;
+    color:#000;
+}
+.shadow-effect{
+    /* box-shadow: 0 0px 5px 0 rgba(0,0,0,.2), 0 0px 6px 0 rgba(0,0,0,.2); */
+    box-shadow: 0px 0px 9px -4px rgba(0,0,0,.4);
+}
+.categories-list{
+    font-size: 14px;
+}
+.categories-list .a-category i{
+    margin-right: 5px;
+}
+.categories-list .a-category{
+    margin:3px 0px;
+}
+.categories-list .a-category a.active{
+    color: #878787;
+    padding: 4px 0px;
+    text-transform: capitalize;
+}
+.select-price-range{
+   position: relative;
+   width: 100%;
+}
+.select-price-range .custom-select{
+height: calc(1.5em + .55rem + 2px);
+padding: .175rem 1.75rem .175rem .75rem;
+font-weight: 400;
+border-radius:0px; 
+font-size: 14px;
+}
+
+.price-btw{
+    position: absolute;
+    left: 11px;
+    top: 4px;
+    font-size: 14px;
+}
+.icon-menu{
+float:right;
+margin-right: 15px;
+margin-top: 3px;
+}
+.sticky-filter .fliter-by-accordion:last-child .accordion-group{
+    border:none;
+
+}
+.fliter-by-accordion .custom-checkbox label{
+    font-size: 14px;
+    font-weight: 400;
+
+}
+.accordion-group {
+    border-bottom: 1px solid #f0f0f0;
+}
+.accordion-group .accordion-body{
+margin:0px 20px 10px 20px;
+}
+.accordion-group .accordion-heading .accordion-toggle{
+    padding: 15px 20px;
+    display: block;
+}
+
+
+@media (min-width:43.75em) {
+	.sticky-filter {
+        width: 100%;
+        position:sticky;
+        z-index: 1;
+        top: 90px;
+        left: 10px;
+        background:#fff;
+        overflow-x: hidden;
+        padding:0px;
+		display: inline-block;
+		height: auto;
+		vertical-align: top;
+	}
+}
+
+
+/******************PRODUCT GRID PAGE *************************/
+.product-grid-box{
+    box-shadow: 0px 0px 6px -3px rgba(0,0,0,.4);
+    width: 100%;
+    height:auto;
+    margin-bottom:20px;
+    padding:15px 10px 30px 10px;
+}
+.product-grid-box .product-item{
+margin:10px 0px;
+} 
+.product-grid-box .card{
+background:#fff;
+
+}
+.product-grid-box .card:hover{
+box-shadow:0px 0px 30px -10px rgba(0,0,0,.2);
+}
+.pagination-box{
+    box-shadow: 0px 0px 6px -3px rgba(0,0,0,.5);
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    padding: 15px 10px 1px 10px;
+}
+.pagination-box .pagination .page-item{
+font-weight: 500;
+}

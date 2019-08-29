@@ -1,0 +1,108 @@
+<div class="container-fluid my-3">
+   <div class="row">
+      <div class="col-lg-9 col-md-9">
+         <div class="row ">
+            <div class="col-lg-5 col-md-5">
+               <div class="product-img-box ">
+                  <div class="product-img ">
+                     <img src="{{products[0]?.product_img}}">
+                  </div>
+               </div>
+            </div>
+            <div class="col-lg-7 col-md-7">
+               <div class="single-product-detail ">
+                  <div class="breadcrumb">
+                     <div  class="breadcrumb-items">
+                        <a href="#!">item1</a>
+                        <span class="arrow angle-right"></span>
+                     </div>
+                     <div  class="breadcrumb-items">
+                        <a href="#!">item1</a>
+                        <span class="arrow angle-right"></span>
+                     </div>
+                  </div>
+                  <div class="single-product-title">
+                     <div class="product-title">
+                        <h6>{{products[0]?.product_title}}</h6>
+                     </div>
+                     <div class="my-2 ">{{products[0]?.product_brand}}</div>
+                  </div>
+                  <div class="product-discount">
+                     <span>Extra {{(((products[0]?.product_mrp - products[0]?.product_offer_price)/products[0]?.product_mrp) * 100) | number:'1.0-0'}}% discount</span>
+                  </div>
+                  <div class="product-price">
+                     <span class="product-mrp">M.R.P. :  <del>₹{{products[0]?.product_mrp}}</del></span><br>
+                     <span class="actual-price">₹ {{products[0]?.product_offer_price}}</span><br>
+                     <span class="price-u-save">You save : <span style="color:#F44342;">₹ {{products[0]?.product_mrp - products[0]?.product_offer_price}}</span></span>
+                  </div>
+                  <div class="pay-on-delivery"><strong>Pay on Delivery (Cash/Card)</strong> eligible 
+                     <a href="#" data-toggle="popover" data-trigger="hover" data-placement="bottom" title="What is Pay on Delivery (Cash/Card) ?" 
+                        data-content="Pay on Delivery (Cash/Card) payment method includes Cash on Delivery (COD) as well as Debit card / Credit card / Net banking payments at your doorstep.">What is this?  </a> 
+                  </div>
+                  <div class="composition mt-4" [innerHTML]='products[0]?.product_compositions'></div>
+               </div>
+            </div>
+         </div>
+         <div class="col-12 mt-4 px-0">
+            <div class="product-box my-3">
+               <h4 class="ml-4">Related Product</h4>
+               <div class="product-slider" id="related_product-slider" >
+                  <div class="item product-item home-product" *ngFor="let product of related_products">
+                     <a [routerLink]="['/browse', product.product_title, product.product_id]">
+                        <div class="card">
+                           <div class="product-img related_img_div">
+                              <img class="card-img-top" src="{{product.product_img}}" alt="Card image cap">
+                           </div>
+                           <div class="card-body text-center">
+                              <h6 class="card-title product-title">{{product.product_title}}...</h6>
+                              <p class="card-text product-category">{{product.product_category}}</p>
+                              <div class="product-discount">
+                                 <span><del>₹ {{product.product_mrp}}</del> 
+                                    {{(((product.product_mrp - product.product_offer_price)/product.product_mrp) * 100) | number:'1.0-0'}}% Off
+                                 </span>
+                              </div>
+                              <p class="product-price">₹ {{product.product_offer_price}}</p>
+                              
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+               </div>
+            </div>
+            <div class="desc" [innerHTML]='products[0]?.product_longDescription'></div>
+         </div>
+      </div>
+      <div class="col-lg-3 col-lg-3">
+         <div class="fixedsidebar pt-3">
+            <div class="share-icon text-center my-2">
+               <h3>Share</h3>
+               <a class="btn twt-btn social-btn-size-sm social-btn" ><i class="fab fa-twitter"></i></a>    
+               <!--Facebook-->
+               <a class="btn fb-btn social-btn-size-sm social-btn" ><i class="fab fa-facebook-f"></i></a>
+               <!--Whatsapp-->
+               <a class="btn whatsapp-btn social-btn-size-sm social-btn" ><i class="fab fa-whatsapp"></i></a>  
+               <!--Email-->
+               <a class="btn email-btn social-btn-size-sm social-btn" ><i class="fas fa-envelope"></i></a>  
+            </div>
+            <div class="product-quantity mt-4 pt-4">
+               <div class="select-quant ml-4">
+                  <span>Quantity</span>
+                  <select class="browser-default custom-select">
+                     <option selected>1</option>
+                     <option value="2">2</option>
+                     <option value="3">3</option>
+                  </select>
+               </div>
+               <div class="product-btn my-4 px-3">
+                  <!--Indigo-->
+                  <!--Yellow-->
+                  <button *ngIf="!cartItem" type="button" (click)="addItem()" class="btn btn-cyan btn-block"><i class="fa fa-shopping-cart mr-2"></i><strong>ADD TO CART</strong> </button>
+                  <button *ngIf="cartItem" type="button" (click)="goToCart()" class="btn btn-cyan btn-block"><i class="fa fa-shopping-cart mr-2"></i><strong>GO TO CART</strong> </button>
+                  <!--Amber-->
+                  <button type="button" class="btn btn-primary btn-block"><i class="fas fa-bolt mr-2"></i> <strong>Buy Now</strong></button>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
